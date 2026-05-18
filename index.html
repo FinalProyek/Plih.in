@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilih.In</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<h2>Pilih.In</h2>
+</nav>
+
+<section class="hero">
+<h1>Katalog Fashion</h1>
+<p>Temukan gaya terbaikmu</p>
+</section>
+
+<div class="controls">
+
+<input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="cariProduk()">
+
+<select id="sortHarga" onchange="sortHarga()">
+<option value="">Sort Harga</option>
+<option value="asc">Termurah</option>
+<option value="desc">Termahal</option>
+</select>
+
+<div class="filter">
+<button onclick="filterProduk('all')">Semua</button>
+<button onclick="filterProduk('baju')">Baju</button>
+<button onclick="filterProduk('celana')">Celana</button>
+<button onclick="filterProduk('aksesoris')">Aksesoris</button>
+</div>
+
+</div>
+
+<section class="container" id="produkContainer">
+
+
+
+<!-- BAGIAN DESKRIPSI PRODUK SAAT DI KLIK -->
+<div class="produk baju" data-harga="120000"
+onclick="openPopup('T-Shirt Basic','Kaos cotton combed premium sangat nyaman dipakai sehari hari. Bahan adem dan cocok untuk casual outfit.','120000','15','⭐⭐⭐⭐')">
+
+<!-- BAGIAN YANG TAMPIL DI HALAMAN AWAL -->
+<img src="baju.jpg" alt=""> 
+<h3>T-Shirt Basic</h3>
+<p class="rating">⭐⭐⭐⭐</p>
+<p class="harga">Rp120000</p>
+<p class="stok">Stok: 15</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+
+<button>Beli</button>
+
+</div>
+
+
+<div class="produk celana" data-harga="250000"
+onclick="openPopup('Celana Jeans Slim Fit','Celana jeans modern dengan bahan stretch yang fleksibel dan nyaman dipakai sepanjang hari.','250000','10','⭐⭐⭐⭐⭐')">
+
+<img src="celanajeans.jpg">
+<h3>Celana Jeans Slim Fit</h3>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p class="harga">Rp250000</p>
+<p class="stok">Stok: 10</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+<button>Beli</button>
+
+</div>
+
+
+<div class="produk aksesoris" data-harga="180000"
+onclick="openPopup('Jam Tangan Casual','Jam tangan dengan desain minimalis dan elegan cocok untuk outfit casual maupun formal.','180000','8','⭐⭐⭐⭐')">
+
+<img src="jamtangan.jpg">
+<h3>Jam Tangan Casual</h3>
+<p class="rating">⭐⭐⭐⭐</p>
+<p class="harga">Rp180000</p>
+<p class="stok">Stok: 8</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+<button>Beli</button>
+
+</div>
+
+
+<div class="produk baju" data-harga="320000"
+onclick="openPopup('Hoodie Oversize','Hoodie oversize dengan bahan fleece tebal yang nyaman dan hangat. Cocok untuk street style.','320000','12','⭐⭐⭐⭐⭐')">
+
+<img src="hoodie.jpg">
+<h3>Hoodie Oversize</h3>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p class="harga">Rp320000</p>
+<p class="stok">Stok: 12</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+<button>Beli</button>
+
+</div>
+
+
+
+<div class="produk aksesoris" data-harga="95000"
+onclick="openPopup('Kacamata Fashion','Kacamata stylish dengan desain modern untuk menunjang penampilan sehari hari.','95000','20','⭐⭐⭐⭐')">
+
+<img src="kacamata.jpg">
+<h3>Kacamata Fashion</h3>
+<p class="rating">⭐⭐⭐⭐</p>
+<p class="harga">Rp95000</p>
+<p class="stok">Stok: 20</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+<button>Beli</button>
+
+</div>
+
+<div class="produk aksesoris" data-harga="10000"
+onclick="openPopup('Jam Tangan Casual','Jam tangan dengan desain minimalis dan elegan cocok untuk outfit casual maupun formal.','180000','8','⭐⭐⭐⭐')">
+
+<img src="kalung.jpg">
+<h3>Kalung</h3>
+<p class="rating">⭐⭐⭐⭐</p>
+<p class="harga">Rp10000</p>
+<p class="stok">Stok: 8</p>
+<p><a class="wa" href="https://wa.me/6287728911526" target="_blank">Link Order</a></p>
+<button>Beli</button>
+
+</div>
+
+
+</section>
+
+<div id="popup" class="popup">
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">×</span>
+
+<h2 id="popupNama"></h2>
+<p id="popupRating"></p>
+<p id="popupDeskripsi"></p>
+<p id="popupHarga"></p>
+<p id="popupStok"></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
